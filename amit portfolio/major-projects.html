@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Major Projects - Amit Singh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ───── NAV ───── -->
+  <nav class="nav nav--visible" id="nav">
+    <div class="container nav__container">
+
+      <ul class="nav__links">
+        <li><a href="index.html#home">Home</a></li>
+        <li class="nav__dropdown">
+          <a href="index.html#about">About</a>
+          <ul class="nav__submenu">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown">
+          <a href="index.html#projects">Projects</a>
+          <ul class="nav__submenu">
+            <li><a href="minor-projects.html">Minor Projects</a></li>
+            <li><a href="major-projects.html">Major Projects</a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown">
+          <a href="index.html#research">Research</a>
+          <ul class="nav__submenu">
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="certificate.html">Achievements</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="projects section" id="major-projects" style="padding-top: 6rem; min-height: 100vh;">
+    <div class="container">
+      <a href="index.html"
+        style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--gold); text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: 0.3s; padding: 0.5rem 1.2rem; border: 1px solid var(--gold); border-radius: 50px;"
+        onmouseover="this.style.background='var(--gold)'; this.style.color='var(--bg)'"
+        onmouseout="this.style.background='transparent'; this.style.color='var(--gold)'">
+        <span>&larr;</span> Go Back
+      </a>
+
+      <h1 class="section-title">Major <em>Projects</em></h1>
+
+      <div class="projects__grid" style="margin-top: 3rem;">
+
+        <div class="project-card project-card--featured">
+          <div class="project-card__img">
+            <img src="assets/images/Screenshot 2026-04-14 124156.png" alt="MoodLens" />
+            <div class="project-card__overlay">
+              <a href="https://singhamit55.github.io/emotion-recognition-system/" target="_blank"
+                class="project-link">🔗 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags"><span>Python</span><span>AI/ML</span><span>Computer Vision</span></div>
+            <h3>MoodLens — Emotion Detector</h3>
+            <p>Real-time facial emotion recognition using TensorFlow/Keras and OpenCV. Detects 7 emotions from facial
+              expressions with pre-trained deep learning models.</p>
+            <a href="https://github.com/singhamit55/emotion-recognition-system" target="_blank"
+              style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.5rem; background: var(--bg3); color: var(--gold); border: 1px solid var(--gold); border-radius: 50px; text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.9rem;">🔗
+              GitHub Repository</a>
+          </div>
+        </div>
+
+        <div class="project-card project-card--featured">
+          <div class="project-card__img">
+            <img src="assets/images/project_image/image.png" alt="DermAI" />
+            <div class="project-card__overlay">
+              <a href="https://agent-6a5baeb93ab28bd43c5224d4--dermai-amit.netlify.app" target="_blank" class="project-link">🔗 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags"><span>AI/ML</span><span>Healthcare</span></div>
+            <h3>DermAI</h3>
+            <ul style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.2rem; line-height: 1.6;">
+              <li><strong>Acne Detection:</strong> Real-time severity grading powered by an EfficientNet-B0 CNN.</li>
+              <li><strong>Tri-Layer XAI:</strong> Clinically interpretable AI using Grad-CAM, LIME, and SHAP.</li>
+              <li><strong>Intelligent Assistant:</strong> Fast Groq API integration for personalized skincare insights.</li>
+              <li><strong>Smart Tracking:</strong> Automatically logs history and builds dynamic daily routines.</li>
+            </ul>
+            <a href="#" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.5rem; background: var(--bg3); color: var(--gold); border: 1px solid var(--gold); border-radius: 50px; text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.9rem;">🔗 GitHub Repository</a>
+          </div>
+        </div>
+
+        <div class="project-card project-card--featured">
+          <div class="project-card__img">
+            <img src="assets/images/project_image/KIIT-Hostel-Campus-3.webp" alt="Hostel Management System" />
+            <div class="project-card__overlay">
+              <a href="https://hostel-management-system-575t.onrender.com" target="_blank" class="project-link">🔗 Live Demo</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags"><span>Full Stack</span><span>Web Dev</span></div>
+            <h3>Hostel Management System</h3>
+            <p style="margin-bottom: 1rem;">A comprehensive web application designed to streamline hostel operations. Includes features for student registration, room allocation, fee tracking, and administrative dashboards.</p>
+            <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 8px; border: 1px solid rgba(201,168,76,0.2); font-size: 0.85rem; margin-bottom: 1rem;">
+              <div style="color: var(--gold); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.8rem;">Demo Credentials</div>
+              <div style="display: flex; flex-direction: column; gap: 0.4rem; color: var(--text-muted);">
+                <div>🧑‍🎓 <strong>Student:</strong> <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;">EN2001</code> <span style="opacity:0.5; margin:0 5px;">|</span> Pass: <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;">password</code></div>
+                <div>🛡️ <strong>Admin:</strong> <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;">superadmin</code> <span style="opacity:0.5; margin:0 5px;">|</span> Pass: <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px;">password</code></div>
+              </div>
+            </div>
+            <a href="#" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.5rem; background: var(--bg3); color: var(--gold); border: 1px solid var(--gold); border-radius: 50px; text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.9rem;">🔗 GitHub Repository</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Amit Singh<span class="dot">.</span></div>
+      <p>Amit Singh. All rights reserved © 2026.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

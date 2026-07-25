@@ -19,7 +19,89 @@ window.toggleTheme = function() {
   console.log('Theme toggled to:', isLight ? 'LIGHT MODE' : 'DARK MODE');
 };
 
+window.openCertificateModal = function(trigger) {
+  const modal = document.getElementById('certificateModal');
+  const frame = document.getElementById('certificateFrame');
+  const title = document.getElementById('certificateModalTitle');
+  const download = document.getElementById('certificateDownload');
+
+  if (!modal || !frame || !title || !download) return;
+
+  const pdf = trigger?.getAttribute('data-pdf') || 'CV.pdf';
+  const modalTitle = trigger?.getAttribute('data-title') || 'Certificate';
+  const safeName = modalTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+  title.textContent = modalTitle;
+  frame.src = pdf;
+  download.href = pdf;
+  download.download = `${safeName || 'certificate'}.pdf`;
+  modal.style.display = 'block';
+};
+
+window.closeCertificateModal = function() {
+  const modal = document.getElementById('certificateModal');
+  if (modal) modal.style.display = 'none';
+};
+
+window.openMarksheetModal = function(trigger) {
+  const modal = document.getElementById('marksheetModal');
+  const frame = document.getElementById('marksheetFrame');
+  const title = document.getElementById('marksheetModalTitle');
+  const download = document.getElementById('marksheetDownload');
+
+  if (!modal || !frame || !title || !download) return;
+
+  const pdf = trigger?.getAttribute('data-pdf') || 'assets/CV.pdf';
+  const modalTitle = trigger?.getAttribute('data-title') || 'Marksheet';
+  const safeName = modalTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+  title.textContent = modalTitle;
+  frame.src = pdf;
+  download.href = pdf;
+  download.download = `${safeName || 'marksheet'}.pdf`;
+  modal.style.display = 'block';
+};
+
+window.closeMarksheetModal = function() {
+  const modal = document.getElementById('marksheetModal');
+  if (modal) modal.style.display = 'none';
+};
+
+window.openPaperModal = function(trigger) {
+  const modal = document.getElementById('paperModal');
+  const frame = document.getElementById('paperFrame');
+  const title = document.getElementById('paperModalTitle');
+  const download = document.getElementById('paperDownload');
+
+  if (!modal || !frame || !title || !download) return;
+
+  const pdf = trigger?.getAttribute('data-pdf') || '';
+  const modalTitle = trigger?.getAttribute('data-title') || 'Research Paper';
+  const safeName = modalTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+  title.textContent = modalTitle;
+  frame.src = pdf;
+  download.href = pdf;
+  download.download = `${safeName || 'paper'}.pdf`;
+  modal.style.display = 'block';
+};
+
+window.closePaperModal = function() {
+  const modal = document.getElementById('paperModal');
+  if (modal) modal.style.display = 'none';
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+  const CONTACT_EMAIL = 'amitsingh.bee@gmail.com';
+
+  const showFormStatus = (message, isSuccess) => {
+    if (!successMsg) return;
+    successMsg.textContent = message;
+    successMsg.style.color = isSuccess ? '#4ade80' : '#ff6b6b';
+    successMsg.style.borderColor = isSuccess ? 'rgba(74, 222, 128, 0.2)' : 'rgba(255, 107, 107, 0.35)';
+    successMsg.style.background = isSuccess ? 'rgba(74, 222, 128, 0.08)' : 'rgba(255, 107, 107, 0.12)';
+    successMsg.style.display = 'block';
+  };
 
   // ── THEME TOGGLE ────────────────────────
   const themeToggle = document.getElementById('themeToggle');
@@ -48,9 +130,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── NAV SCROLL ──────────────────────────
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  const homeSection = document.getElementById('home');
+
+  if (nav) {
+    let lastScroll = window.scrollY;
+    
+    // Initial state
+    nav.classList.add('nav--visible');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      
+      if (currentScroll > 80 && currentScroll > lastScroll) {
+        // Scrolling down & past 80px: hide nav
+        nav.classList.remove('nav--visible');
+      } else {
+        // Scrolling up or at the very top: show nav
+        nav.classList.add('nav--visible');
+      }
+      
+      lastScroll = currentScroll;
+    });
+  }
 
   // ── HAMBURGER (mobile) ──────────────────
   const hamburger = document.getElementById('hamburger');
@@ -109,6 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cardGroups = [
     document.querySelectorAll('.skill-card'),
     document.querySelectorAll('.project-card'),
+    document.querySelectorAll('.education-item'),
     document.querySelectorAll('.testi-card'),
   ];
 
@@ -150,22 +252,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const successMsg = document.getElementById('formSuccess');
 
   if (form && successMsg) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
       btn.textContent = 'Sending...';
       btn.disabled = true;
+      successMsg.style.display = 'none';
 
-      setTimeout(() => {
-        successMsg.style.display = 'block';
-        form.reset();
-        btn.textContent = 'Send Message →';
+      const formData = new FormData(form);
+      // Add the Web3Forms access key
+      formData.append("access_key", "69b0f5fa-7e99-4d81-97c0-3c1783e14eb0");
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+        const result = await response.json();
+
+        if (response.status === 200) {
+          showFormStatus('✅ Message sent successfully! I will get back to you soon.', true);
+          form.reset();
+        } else {
+          showFormStatus('❌ ' + (result.message || 'Something went wrong!'), false);
+        }
+      } catch (error) {
+        showFormStatus('❌ Network error! Please try again.', false);
+      } finally {
+        btn.textContent = originalText;
         btn.disabled = false;
-
-        setTimeout(() => {
-          successMsg.style.display = 'none';
-        }, 4000);
-      }, 1200);
+      }
     });
   }
 
@@ -258,6 +375,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── MODAL CLICK-OUTSIDE TO CLOSE ──────
   const cvModal = document.getElementById('cvModal');
   const paperModal = document.getElementById('paperModal');
+  const certificateModal = document.getElementById('certificateModal');
+  const marksheetModal = document.getElementById('marksheetModal');
 
   if (cvModal) {
     cvModal.addEventListener('click', (e) => {
@@ -275,11 +394,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  if (certificateModal) {
+    certificateModal.addEventListener('click', (e) => {
+      if (e.target === certificateModal) {
+        certificateModal.style.display = 'none';
+      }
+    });
+  }
+
+  if (marksheetModal) {
+    marksheetModal.addEventListener('click', (e) => {
+      if (e.target === marksheetModal) {
+        marksheetModal.style.display = 'none';
+      }
+    });
+  }
+
   // Close modals on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (cvModal) cvModal.style.display = 'none';
       if (paperModal) paperModal.style.display = 'none';
+      if (certificateModal) certificateModal.style.display = 'none';
+      if (marksheetModal) marksheetModal.style.display = 'none';
     }
   });
 

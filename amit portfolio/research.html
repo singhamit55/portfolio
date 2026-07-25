@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research - Amit Singh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ───── NAV ───── -->
+  <nav class="nav nav--visible" id="nav">
+    <div class="container nav__container">
+
+      <ul class="nav__links">
+        <li><a href="index.html#home">Home</a></li>
+        <li class="nav__dropdown">
+          <a href="index.html#about">About</a>
+          <ul class="nav__submenu">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown">
+          <a href="index.html#projects">Projects</a>
+          <ul class="nav__submenu">
+            <li><a href="minor-projects.html">Minor Projects</a></li>
+            <li><a href="major-projects.html">Major Projects</a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown">
+          <a href="index.html#research">Research</a>
+          <ul class="nav__submenu">
+            <li><a href="research.html">Research</a></li>
+            <li><a href="certificate.html">Achievements</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ───── RESEARCH & PUBLICATIONS ───── -->
+  <section class="projects section" id="research" style="padding-top: 6rem; min-height: 100vh;">
+    <div class="container">
+      <a href="index.html"
+        style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--gold); text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: 0.3s; padding: 0.5rem 1.2rem; border: 1px solid var(--gold); border-radius: 50px;"
+        onmouseover="this.style.background='var(--gold)'; this.style.color='var(--bg)'"
+        onmouseout="this.style.background='transparent'; this.style.color='var(--gold)'">
+        <span>&larr;</span> Go Back
+      </a>
+      <h1 class="section-title">Publications & <em>Research</em></h1>
+      <div class="projects__grid" style="margin-top: 3rem;">
+
+        <div class="project-card">
+          <div class="project-card__body"
+            style="padding: 1.5rem; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; background: rgba(201,168,76,0.03);">
+            <div class="project-card__tags"><span>AI/ML</span><span>Healthcare</span><span>Explainable AI</span></div>
+            <h3>Explainable AI for Preclinical Risk Detection of Bile Duct Cancer</h3>
+            <p>Developed an innovative XAI framework for early cholangiocarcinoma detection using multi-omics and
+              microbiome data. Achieved 91% accuracy with SHAP/LIME interpretability, identifying high-risk patients
+              12-18
+              months prior to clinical diagnosis.</p>
+            <div
+              style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+              <span>📅 <strong>27 February 2026</strong></span>
+              <span>📍 <strong>Raipur, India</strong></span>
+            </div>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem; color: var(--text-muted);"><strong>Published in:</strong>
+              2025 13th International Conference on Intelligent Systems and Embedded Design (ISED)</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--gold);"><strong>DOI:</strong>
+              <a href="https://ieeexplore.ieee.org/document/11405038" target="_blank" style="color: inherit; text-decoration: underline;">10.1109/ISED67359.2025.11405038</a></p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; align-items: center;">
+              <button onclick="openPaperModal(this)" data-title="Explainable AI for Preclinical Risk Detection"
+                data-pdf="assets/research_paper/Explainable_AI_for_Preclinical_Risk_Detection_of_Bile_Duct_Cancer_Using_Multi_Omics_and_Microbiome_Data___Copy_%20(2).pdf"
+                style="display: inline-flex; align-items: center; justify-content: center; padding: 0; background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%); color: white; border: none; border-radius: 50px; font-weight: 600; transition: 0.3s; font-size: 0.9rem; cursor: pointer; text-align: center; width: 160px; height: 44px;">View PDF</button>
+              <a href="certificate.html"
+                style="display: inline-flex; align-items: center; justify-content: center; padding: 0; background: transparent; color: var(--gold); border: 2px solid var(--gold); border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; font-size: 0.9rem; cursor: pointer; text-align: center; width: 160px; height: 44px;">Achievement</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <div class="project-card__body"
+            style="padding: 1.5rem; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; background: rgba(201,168,76,0.03);">
+            <div class="project-card__tags"><span>AI/ML</span><span>Graph Neural Network</span></div>
+            <h3>Community Level Risk Detection via Hybrid Graph Neural Network and Text Encoding</h3>
+            <p>Developed a hybrid approach combining Graph Neural Networks (GNN) and Text Encoding for robust
+              community-level risk detection, achieving an impressive AUC of 92%</p>
+            <div
+              style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+              <span>📅 <strong>June 26, 2026</strong></span>
+              <span>📍 <strong>Kolkata, West Bengal, India</strong></span>
+            </div>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem; color: var(--text-muted);"><strong>Published in:</strong>
+              7th International Conference on Frontiers in Computing and Systems (COMSYS-2026)</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: nowrap; align-items: center;">
+              <button onclick="openPaperModal(this)" data-title="Community Level Risk Detection"
+                data-pdf="assets/research_paper/Community_Level_Risk_Detection_via_Hybrid_Graph_Neural_Network_and_Text_Encoding%20(1).pdf"
+                style="display: inline-flex; align-items: center; justify-content: center; padding: 0; background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%); color: white; border: none; border-radius: 50px; font-weight: 600; transition: 0.3s; font-size: 0.9rem; cursor: pointer; text-align: center; width: 160px; height: 44px;">View PDF</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__body"
+            style="padding: 1.5rem; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; background: rgba(201,168,76,0.03);">
+            <div class="project-card__tags"><span>AI/ML</span><span>Computer Vision</span><span>Healthcare</span></div>
+            <h3>Explainable AI for Diagnosing Acne Severity Using Smartphone Images</h3>
+            <p>Developed an Explainable AI framework for diagnosing acne severity from smartphone images, providing
+              interpretable and accessible dermatological assessments and achieving 91.6% accuracy.</p>
+            <div
+              style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+              <span>📅 <strong>June 26, 2026</strong></span>
+              <span>📍 <strong>O.P. Jindal University, Raigarh, India</strong></span>
+            </div>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem; color: var(--text-muted);"><strong>Published in:</strong>
+              5th OPJU International Technology Conference (OTCON) on Smart Computing for Innovation and Advancement in
+              Industry 5.0</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; align-items: center;">
+              <button onclick="openPaperModal(this)" data-title="Explainable AI for Diagnosing Acne Severity"
+                data-pdf="assets/research_paper/Explainable_AI_for_Diagnosing_Acne_Severity_Using_Smartphone_Images%20(1).pdf"
+                style="display: inline-flex; align-items: center; justify-content: center; padding: 0; background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%); color: white; border: none; border-radius: 50px; font-weight: 600; transition: 0.3s; font-size: 0.9rem; cursor: pointer; text-align: center; width: 160px; height: 44px;">View PDF</button>
+              <a href="certificate.html"
+                style="display: inline-flex; align-items: center; justify-content: center; padding: 0; background: transparent; color: var(--gold); border: 2px solid var(--gold); border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; font-size: 0.9rem; cursor: pointer; text-align: center; width: 160px; height: 44px;">Achievement</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Amit Singh<span class="dot">.</span></div>
+      <p>Amit Singh. All rights reserved © 2026.</p>
+
+    </div>
+  </footer>
+
+  <!-- ───── RESEARCH PAPER MODAL ───── -->
+  <div id="paperModal"
+    style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8);">
+    <div
+      style="position:relative; margin:auto; width:90%; max-width:900px; height:90%; top:5%; background-color:white; border-radius:12px; box-shadow:0 10px 50px rgba(0,0,0,0.3);">
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; padding:20px; border-bottom:1px solid #eee;">
+        <h2 id="paperModalTitle" style="margin:0; font-size:24px; color:#0e0e14;">Research Paper - PDF</h2>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <a id="paperDownload"
+            href="assets/research_paper/Explainable_AI_for_Preclinical_Risk_Detection_of_Bile_Duct_Cancer_Using_Multi_Omics_and_Microbiome_Data___Copy_%20(2).pdf"
+            download="Explainable_AI_Bile_Duct_Cancer.pdf"
+            style="padding:10px 20px; background:#ff6b9d; color:white; border:none; border-radius:6px; cursor:pointer; text-decoration:none; font-weight:600;">⬇️
+            Download Paper</a>
+          <span onclick="closePaperModal()"
+            style="cursor:pointer; font-size:28px; font-weight:bold; color:#999; transition:color 0.3s; line-height:1;">×</span>
+        </div>
+      </div>
+      <iframe id="paperFrame"
+        src="assets/research_paper/Explainable_AI_for_Preclinical_Risk_Detection_of_Bile_Duct_Cancer_Using_Multi_Omics_and_Microbiome_Data___Copy_%20(2).pdf"
+        style="width:100%; height:calc(100% - 70px); border:none; border-radius:0 0 12px 12px;"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

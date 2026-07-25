@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates - Amit Singh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="nav nav--visible" id="nav">
+    <div class="container nav__container">
+
+      <ul class="nav__links">
+        <li><a href="index.html#home">Home</a></li>
+        <li class="nav__dropdown">
+          <a href="index.html#about">About</a>
+          <ul class="nav__submenu">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li class="nav__dropdown">
+          <a href="index.html#research">Research</a>
+          <ul class="nav__submenu">
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="#certificates">Achievements</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="projects section" id="certificates" style="padding-top: 6rem; min-height: 100vh;">
+    <div class="container">
+      <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--gold); text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: 0.3s; padding: 0.5rem 1.2rem; border: 1px solid var(--gold); border-radius: 50px;" onmouseover="this.style.background='var(--gold)'; this.style.color='var(--bg)'" onmouseout="this.style.background='transparent'; this.style.color='var(--gold)'">
+        <span>&larr;</span> Go Back
+      </a>
+      <h1 class="section-title">Achievements & <em>Credentials</em></h1>
+
+
+      <div class="projects__grid" style="grid-template-columns: 1fr; gap: 2rem;">
+        <article class="project-card">
+          <div class="project-card__body" style="min-height: 220px;">
+            <div class="project-card__tags"><span>IBM</span><span>Machine Learning</span></div>
+            <h3>IBM Machine Learning Certificate</h3>
+            <p>Successfully completed IBM Machine Learning certification.</p>
+            <p><strong>Learning Path:</strong><br />Exploratory Data Analysis for Machine Learning<br />Supervised
+              Machine Learning: Regression<br />Supervised Machine Learning: Classification<br />Unsupervised Machine
+              Learning<br />Deep Learning and Reinforcement Learning<br />Machine Learning Capstone</p>
+            <button type="button" class="cert-view-btn" data-pdf="assets/research_paper/Final%20ML%20completetion.pdf"
+              data-title="IBM Machine Learning Certificate" onclick="openCertificateModal(this)"
+              style="display: inline-flex; align-items: center; justify-content: center; padding: 0; background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%); color: white; border: none; border-radius: 8px; font-weight: 600; transition: 0.3s; font-size: 0.9rem; cursor: pointer; text-align: center; width: 160px; height: 44px; margin-top: auto;">View
+              Certificate</button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__body" style="min-height: 220px;">
+            <div class="project-card__tags"><span>IEEE</span><span>ISED 2025</span><span>Presentation</span></div>
+            <h3>Paper Presentation Certificate</h3>
+            <p>Certificate for paper presentation in the 13th IEEE International Conference on ISED-2025.</p>
+            <p><strong>Paper:</strong> Explainable AI for Preclinical Risk Detection of Bile Duct Cancer Using
+              Multi-Omics, Microbiome Data and Clinical Signals.</p>
+            <button type="button" class="cert-view-btn" data-pdf="assets/research_paper/certificate%20of%20paper%20662.pdf"
+              data-title="Paper Presentation - IEEE ISED 2025" onclick="openCertificateModal(this)"
+              style="display: inline-flex; align-items: center; justify-content: center; padding: 0; background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%); color: white; border: none; border-radius: 8px; font-weight: 600; transition: 0.3s; font-size: 0.9rem; cursor: pointer; text-align: center; width: 160px; height: 44px; margin-top: auto;">View
+              Certificate</button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__body" style="min-height: 220px;">
+            <div class="project-card__tags"><span>OTCON 2026</span><span>Presentation</span></div>
+            <h3>Paper Presentation Certificate</h3>
+            <p>Certificate for paper presentation in the 5th OPJU International Technology Conference (OTCON).</p>
+            <p><strong>Paper:</strong> Explainable AI for Diagnosing Acne Severity Using Smartphone Images.</p>
+            <button type="button" class="cert-view-btn" data-pdf="assets/research_paper/Paper%20Presentation%20(1).pdf"
+              data-title="Paper Presentation - OTCON 2026" onclick="openCertificateModal(this)"
+              style="display: inline-flex; align-items: center; justify-content: center; padding: 0; background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%); color: white; border: none; border-radius: 8px; font-weight: 600; transition: 0.3s; font-size: 0.9rem; cursor: pointer; text-align: center; width: 160px; height: 44px; margin-top: auto;">View
+              Certificate</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Amit Singh<span class="dot">.</span></div>
+      <p>Amit Singh. All rights reserved © 2026.</p>
+    </div>
+  </footer>
+
+  <div id="certificateModal"
+    style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8);">
+    <div
+      style="position:relative; margin:auto; width:90%; max-width:900px; height:90%; top:5%; background-color:white; border-radius:12px; box-shadow:0 10px 50px rgba(0,0,0,0.3); overflow:hidden;">
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; padding:20px; border-bottom:1px solid #eee; position:relative;">
+        <h2 id="certificateModalTitle" style="margin:0; font-size:24px; color:#0e0e14;">Certificate PDF</h2>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <a id="certificateDownload" href="assets/cv/Amit%20(updated%20cv).pdf" download="certificate.pdf"
+            style="padding:10px 20px; background:#ff6b9d; color:white; border:none; border-radius:6px; cursor:pointer; text-decoration:none; font-weight:600;">⬇️
+            Download</a>
+          <span onclick="document.getElementById('certificateModal').style.display='none'"
+            style="cursor:pointer; font-size:28px; font-weight:bold; color:#999; transition:color 0.3s; line-height:1;">×</span>
+        </div>
+      </div>
+      <iframe id="certificateFrame" src="assets/cv/Amit%20(updated%20cv).pdf"
+        style="width:100%; height:calc(100% - 70px); border:none; border-radius:0 0 12px 12px;"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minor Projects - Amit Singh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ───── NAV ───── -->
+  <nav class="nav nav--visible" id="nav">
+    <div class="container nav__container">
+
+      <ul class="nav__links">
+        <li><a href="index.html#home">Home</a></li>
+        <li class="nav__dropdown">
+          <a href="index.html#about">About</a>
+          <ul class="nav__submenu">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown">
+          <a href="index.html#projects">Projects</a>
+          <ul class="nav__submenu">
+            <li><a href="minor-projects.html">Minor Projects</a></li>
+            <li><a href="index.html#major-projects">Major Projects</a></li>
+          </ul>
+        </li>
+        <li class="nav__dropdown">
+          <a href="index.html#research">Research</a>
+          <ul class="nav__submenu">
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="certificate.html">Achievements</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+      <div class="nav__hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="projects section" id="minor-projects" style="padding-top: 6rem; min-height: 100vh;">
+    <div class="container">
+      <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; color: var(--gold); text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: 0.3s; padding: 0.5rem 1.2rem; border: 1px solid var(--gold); border-radius: 50px;" onmouseover="this.style.background='var(--gold)'; this.style.color='var(--bg)'" onmouseout="this.style.background='transparent'; this.style.color='var(--gold)'">
+        <span>&larr;</span> Go Back
+      </a>
+
+      <h1 class="section-title">Minor <em>Projects</em></h1>
+      
+      <div class="projects__grid" style="margin-top: 3rem;">
+
+        <div class="project-card">
+          <div class="project-card__img">
+            <img
+              src="https://media.gettyimages.com/id/1195575719/photo/chess-concept.jpg?s=612x612&w=0&k=20&c=xW3wFfz618STi1AkTrhcFPyn-Js6L8oZU2aEkmDJezQ="
+              alt="Chess Game" />
+            <div class="project-card__overlay">
+              <a href="https://singhamit55.github.io/Chess-game/" target="_blank" class="project-link">Live Demo ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags"><span>JavaScript</span><span>Game</span><span>Web</span></div>
+            <h3>Chess Game</h3>
+            <p>Interactive offline chess game with full move validation and game logic. Play against the computer with a
+              responsive web-based interface.</p>
+            <a href="https://github.com/singhamit55/Chess-game" target="_blank"
+              style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.5rem; background: var(--bg3); color: var(--gold); border: 1px solid var(--gold); border-radius: 50px; text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.9rem;">🔗
+              GitHub Repository</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__img">
+            <img src="https://cdn.pixabay.com/photo/2014/08/22/17/43/calculator-424564_640.jpg" alt="Calculator" />
+            <div class="project-card__overlay">
+              <a href="https://singhamit55.github.io/Calculator/" target="_blank" class="project-link">Live Demo ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags"><span>JavaScript</span><span>Web App</span></div>
+            <h3>Smart Calculator</h3>
+            <p>Advanced calculator with infinite number calculation capacity. Features a clean UI and support for
+              complex mathematical operations.</p>
+            <a href="https://github.com/singhamit55/Calculator" target="_blank"
+              style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.5rem; background: var(--bg3); color: var(--gold); border: 1px solid var(--gold); border-radius: 50px; text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.9rem;">🔗
+              GitHub Repository</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card__img">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/072/505/639/small/digital-led-clock-displaying-twenty-three-fifty-nine-against-black-background-with-blue-light-glow-free-photo.jpg"
+              alt="Digital Clock" />
+            <div class="project-card__overlay">
+              <a href="https://polite-travesseiro-3bc57d.netlify.app/" target="_blank" class="project-link">Live Demo
+                ↗</a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags"><span>HTML/CSS</span><span>Web Project</span></div>
+            <h3>Digital Clock</h3>
+            <p>Real-time digital clock application with responsive design and accurate time display using web
+              technologies.</p>
+            <a href="https://github.com/singhamit55/DigitalClock" target="_blank"
+              style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.5rem; background: var(--bg3); color: var(--gold); border: 1px solid var(--gold); border-radius: 50px; text-decoration: none; font-weight: 500; transition: 0.3s; font-size: 0.9rem;">🔗
+              GitHub Repository</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">Amit Singh<span class="dot">.</span></div>
+      <p>Amit Singh. All rights reserved © 2026.</p>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
