@@ -20,7 +20,7 @@
       <ul class="nav__links">
         <li><a href="#home">Home</a></li>
         <li class="nav__dropdown">
-          <a href="#about">About</a>
+          <a href="#about" style="display: inline-flex; align-items: center; gap: 4px;">About <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg></a>
           <ul class="nav__submenu">
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
@@ -28,14 +28,14 @@
           </ul>
         </li>
         <li class="nav__dropdown">
-          <a href="#projects">Projects</a>
+          <a href="#projects" style="display: inline-flex; align-items: center; gap: 4px;">Projects <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg></a>
           <ul class="nav__submenu">
             <li><a href="minor-projects.html">Minor Projects</a></li>
             <li><a href="major-projects.html">Major Projects</a></li>
           </ul>
         </li>
         <li class="nav__dropdown">
-          <a href="research.html">Research</a>
+          <a href="research.html" style="display: inline-flex; align-items: center; gap: 4px;">Research <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg></a>
           <ul class="nav__submenu">
             <li><a href="research.html">Research</a></li>
             <li><a href="certificate.html">Achievements</a></li>
@@ -53,13 +53,11 @@
   <!-- ───── HERO ───── -->
   <section class="hero" id="home">
     <div class="hero__bg">
-      <div class="orb orb--1"></div>
-      <div class="orb orb--2"></div>
       <div class="grid-lines"></div>
     </div>
     <div class="hero__image-wrap">
       <div class="hero__image-frame">
-        <img src="./assets/images/image1-Photoroom.png" alt="Amit Singh" class="hero__img" />
+        <img src="./assets/images/project_image/ChatGPT Image Sep 7, 2026, 12_58_32 PM.png" alt="Amit Singh" class="hero__img" />
       </div>
     </div>
     <div class="hero__content">
@@ -91,39 +89,32 @@
     <div class="container">
       <div class="section-label">About Me</div>
       <div class="about__grid">
-        <div class="about__visual">
-          <div class="about__img-wrap">
-            <img src="./assets/images/IMG_20260408_001430.jpg-Photoroom.png" alt="About" />
-            <div class="about__img-overlay"></div>
-          </div>
-          <!-- <div class="about__exp-card">
-            <span class="exp-num">5+</span>
-            <span class="exp-text">Years of<br/>Experience</span>
-          </div>-->
-        </div>
         <div class="about__content">
-          <h2 class="section-title" style="color: var(--gold);">Crafting Intelligent Tools for Tomorrow</em></h2>
           <h2 class="section-titles" style="color:rgb(215, 136, 10);">About Me.</h2>
-          <p>Hello! I'm Amit Singh, an AI/ML Engineer and a final year B.Tech student in Computer Science with a passion for building smart
-            solutions using Artificial Intelligence.
+          <p>Hello! I'm Amit Singh, an AI/ML Engineer and a final year B.Tech student in Computer Science with a passion for building smart solutions using Artificial Intelligence.</p>
+          <p>I'm interested in Machine Learning, Deep Learning, LLM and RAG, and I enjoy creating AI applications that solve real-world problems.
+            <br />🔹 <strong>LLMs</strong> — Large Language Models & AI applications
+            <br />🔹 <strong>RAG</strong> — Retrieval-Augmented Generation
+            <br />🔹 <strong>LangChain</strong> — Generative AI & advanced AI workflows
+            <br />🔹 <strong>LangGraph</strong> — Agentic AI & autonomous workflows
+            <br />🔹 <strong>AI Research</strong> — Exploring emerging techniques and intelligent systems...
           </p>
-          <p>I'm interested in Machine Learning, Deep Learning, and Natural Language Processing (NLP), and I enjoy
-            creating AI applications that solve real-world problems.
-          </p>
-          <p>Currently working on :
-            <br />🔹 <strong>LLM</strong> - Large Language Model.
-            <br />🔹 <strong>RAG</strong> - Retrieval Augmented Generation for intelligent applications
-            <br />🔹 <strong>LangChain</strong> - Building advanced AI chains and workflows
-          </p>
-          <p>I have a strong foundation in computer science and enjoy learning new technologies, building AI projects,
-            and improving my skills every day. My goal is to develop intelligent and scalable AI solutions that create a
-            positive impact.</p>
           <div class="about__tags">
             <span class="tag">AI/ML Engineer</span>
             <span class="tag">Problem Solver</span>
             <span class="tag">Fast Learner</span>
           </div>
           <a href="#contact" class="btn btn--primary">Let's Talk →</a>
+        </div>
+        <div class="about__visual">
+          <div class="about__img-wrap">
+            <img src="./assets/images/project_image/ChatGPT Image Sep 7, 2026, 12_56_47 PM.png" alt="About Amit Singh" />
+            <div class="about__img-overlay"></div>
+          </div>
+          <!-- <div class="about__exp-card">
+            <span class="exp-num">5+</span>
+            <span class="exp-text">Years of<br/>Experience</span>
+          </div>-->
         </div>
       </div>
     </div>
@@ -373,12 +364,12 @@
         <form class="contact__form" id="contactForm">
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Full name" required />
+              <label for="name" style="display: none;">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
             </div>
             <div class="form-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" placeholder="amit@example.com" required />
+              <label for="email" style="display: none;">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required />
             </div>
           </div>
           <div class="form-group">
